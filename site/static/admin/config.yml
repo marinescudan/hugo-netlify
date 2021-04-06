@@ -20,11 +20,12 @@ collections: # A list of collections the CMS should be able to edit
     folder: "site/content/recepy" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Intro Blurb", name: "description", widget: "text", required: false}
-      - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Draft", name: "draft", widget: "boolean", default: true, required: false}
+      - { label: 'Code', name: 'code', widget: 'code'}
+      - { label: 'Color', name: 'color', widget: 'color' }
+      - { label: 'Birthdate',name: 'birthdate',widget: 'date',default: '',format: 'MMM Do YY' }
+      - { label: "Start time", name: "start", widget: "datetime", default: "", date_format: "DD.MM.YYYY" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["news"] }
   - name: "pages"
     label: "Pages"
     files:
