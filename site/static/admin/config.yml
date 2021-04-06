@@ -23,10 +23,7 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Draft", name: "draft", widget: "boolean", default: true, required: false}
-      - { label: 'Code', name: 'code', widget: 'code'}
-      - { label: 'Color', name: 'color', widget: 'color' }
       - { label: 'Birthdate',name: 'birthdate',widget: 'date',default: '',format: 'MMM Do YY' }
-      - { label: "Start time", name: "start", widget: "datetime", default: "", date_format: "DD.MM.YYYY" }
       - { label: "Tags", name: "tags", widget: "list", default: ["news"] }
   - name: "pages"
     label: "Pages"
